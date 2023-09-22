@@ -1,356 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
-  <title>Sports Wander</title>
-  <script
-    src="https://kit.fontawesome.com/280f5d0d38.js"
-    crossorigin="anonymous"
-  ></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKwAAACBCAMAAABq3aECAAAADFBMVEWHzuuh2O+Ezeu24PKXYDMSAAAAq0lEQVR4nO3cQQ3AMAzAwGblz3nTOPgR6Q6BEfjcWeOeedaYL/YsIbYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitiK2IrYitvLHrjFn03/2BYD2Bvv+m3A0AAAAAElFTkSuQmCC'); /* Replace with your image URL */
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        .login-container {
+            background-color: white;
+            width: 300px;
+            margin: 100px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .input-container {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-container img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        .input-container input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-left: 30px;
+            font-weight: bold;
+        }
+
+        .social-icons {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .social-icons img {
+            width: 30px;
+            margin: 0 10px;
+            cursor: pointer;
+        }
+        .login-button {
+            background-color: blue; /* Change the button's background color to blue */
+            color: white; /* Text color */
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+    </style>
 </head>
 <body>
-
-  <!-- navbar started -->
-  <nav class="navbar">
-    <div class="nav-full">
-      <div class="nav-logo">
-        <img src="./img/Logo.png" alt="logo">
-      </div>
-      <div class="nav-options">
-        <ul>
-          <li><h5><a href="#">Book Events</a></h5></li>
-          <li><h5><a href="#">Book Venues</a></h5></li>
-          <li><h5><a href="#">Book Stadium Seats</a></h5></li>
-          <li><h5>
-            <a href="#"><i class="fa-solid fa-user"></i> Login </a>
-            |
-            <a href="#"> Signup</a>
-          </h5></li>
-        </ul>
-      </div>
-    </div>
-    <div class="nav-btn" onclick="showDropdown()">
-      <button><i class="fa-solid fa-bars-staggered fa-xl"></i></button>
-    </div>
-    <div class="nav-mob">
-      <ul>
-        <li><p><a href="#">Book Events</a></p></li>
-        <li><p><a href="#">Book Venues</a></p></li>
-        <li><p><a href="#">Book Stadium Seats</a></p></li>
-        <li><p><a href="#">Login | Signup</a></p></li>
-      </ul>
-    </div>
-  </nav>
-  <!-- navbar end -->
-
-
-  <!-- hero section started -->
-  <section class="hero">
-    <div class="hero-overlay">
-      <div class="hero-container">
-        <div class="hero-content">
-          <div class="hero-line">
-            <h3>Enabling people to book</h3>
-            <div class="hero-line-img">
-              <img class="underline" src="./img/Underline.png" alt="underline">
-              <img class="star" src="./img/Star.png" alt="star">
-            </div>
-          </div>
-          <div class="hero-line2">
-            <h2>Sport Events, Venues</h2>
-            <h3  style="display: inline-block;">& Explore</h3>
-            <h2  style="display: inline-block;">Sports Ecosystem</h2>
-          </div>
-  
-          <div class="download-btn">
-            <a href="#"><img src="./img/play store.svg" alt="play store"></a>
-            <a href="#"><img src="./img/apple store.svg" alt="apple store"></a>
-          </div>
+    <div class="login-container">
+        <h2>Login</h2>
+        <div class="input-container">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIQAAACECAMAAABmmnOVAAAAYFBMVEX///8AAADq6uo0NDTv7+/4+PhiYmK+vr719fVBQUHk5OTJyclQUFCbm5sxMTFYWFh2dnZdXV0RERGIiIhsbGwqKioWFhaQkJCzs7MJCQnR0dEbGxvZ2dmqqqolJSWhoaEo/Vo0AAACD0lEQVR4nO2ZAZKCMAxFSQuCgghaBBHX+99yZZkdRwVpoSlxN+8CvmlDkn49j2EYhmEYhmGYFwJfCD9YUCCqS7VbS7neqbKOFlGIM3ggi50rhBJekKFTBZG/KrTkwp1DuO93ANg7O4zDkELLgYCDI4vteweALb5DNeYAUGE7bE7jEqcNssRq3AFghesQ6zgAoDbPINGTSDBHmuZB4B6F0pVQeA5+oStR+GgSoa4DAN4MGW2Wd/DaplaT6MBrFUd9iSOahL4DAEv8DwkShUniEyXRrAzaNt4YJTHASIxyGksNifWOxKJLY+Wn8fgh8Qyk8SCmEQ3QCEloxEWeJwa+1JXD4MzrjxBTtxFiS5w9XMppgTC1pYuVbywXK3cE/o0lA3aGYZgPIQiiH4JFembUhNcyy5O1LM7nQq6TPCuvYeNsgET1JfsaWmrO6oI/ykSlehaJR6SqMHebSmlmNXuFtPY3pZ7AL2VjX0FpPL2eUHY1RDb+k31kFovDIKt6xtZzLNYOifoobKzggWE9vlLObqf+bq4DwG5milbPV2ip5zgYBJfvmVEYGoGILpM76MWeA8B1moO1u+iYdCOWavLOhOr0B3eGqXyZf6ma2a0JianD1b6DcXEKDAcAs6Fq8EeTCUZ5s0hxJFKToxCj2+w0JEuwBEv8HQkSzSpJJQJpYjQ8BBImDgzDMAzDMAzz4XwDxbYe0NwzAAUAAAAASUVORK5CYII=" alt="User Icon">
+            <input type="text" placeholder="Type your username">
         </div>
-        <div class="hero-img">
-          <img src="./img/mobile.png" alt="mobile">
+        <div class="input-container">
+            <img src="data:image/jpeg;base64,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" alt="Lock Icon">
+            <input type="password" placeholder="Type your password">
         </div>
+        <p class="forgot-password">Forgot password?</p>
+       
+        <div class="input-container">
+          <input type="submit" class="login-button" value="Login">
       </div>
-      <div class="insights">
-        <div>
-          <div class="insights-card">
-            <div class="insights-icon">
-              <img src="./img/icons/icon-4.svg" alt="stadium">
-            </div>
-            <div>
-              <h2>789K+</h2>
-              <h4>Venues</h4>
-            </div>
-          </div>
-          <div class="insights-card">
-            <div class="insights-icon">
-              <img src="./img/icons/icon-3.svg" alt="smile">
-            </div>
-            <div>
-              <h2>789K+</h2>
-              <h4>Events</h4>
-            </div>
-          </div>
-        </div>
-        <div>
-          <div class="insights-card">
-            <div class="insights-icon">
-              <img src="./img/icons/icon-1.svg" alt="sports">
-            </div>
-            <div>
-              <h2>789K+</h2>
-              <h4>Users</h4>       
-            </div>
-          </div>
-          <div class="insights-card">
-            <div class="insights-icon">
-              <img src="./img/icons/icon-2.svg" alt="football">
-            </div>
-            <div>
-              <h2>200+</h2>
-              <h4>Sports</h4>
-            </div>
-          </div>
-        </div>
-
-        <div class="imortant-insights">
-          <img src="./img/icons/icon-5.svg" alt="insights">
-          <h2>Important Insights</h2>
-        </div>
-      </div>
+      <p><b>Sign Up or Using</b></p>
+      <div class="social-icons">
+        <img src="data:image/png;base64,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" alt="Facebook Icon">
+        <img src="data:image/jpeg;base64,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" alt="Twitter Icon">
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTohhn8_uMeoWS5Lwmp399lpuLUKjyrzCBMsY1og0dEaOoSCRmFTkQDYSKFOsWvB7t4zNI&usqp=CAU" alt="Twitter Icon">
     </div>
-  </section>
-  <!-- hero section end -->
-
-  <!-- Organizers Section Start -->
-  <section class="organizers">
-    <div class="right-icon">
-      <img src="./img/side.svg">
+    <p><b>Sign Up or Using</b></p>
     </div>
-    <div class="orgaizers-container">
-      <div class="organizers-side-left">
-        <img src="./img/side.svg">
-      </div>
-      <div class="orginizers-center">
-        <div class="organizers-heading">
-          <img src="./img/icons/icon-6.svg" alt="organizers">
-          <div class="organizers-heading-content">
-            <h2>For Organizers</h2>
-            <h4>Five Stages of Events</h4>
-          </div>
-        </div>
-
-        <div class="organizers-card-container">
-          <div class="organizers-card card-1">
-            <div class="badge-circle">
-              <i class="fa-solid fa-calendar-day fa-xl"></i>
-            </div>
-            <div class="organizers-card-content">
-              <h1>01</h1>
-              <h6>Create Event</h6>
-            </div>
-          </div>
-          <div class="organizers-card card-2">
-            <div class="badge-circle">
-              <i class="fa-solid fa-ticket-simple fa-xl"></i>
-            </div>
-            <div class="organizers-card-content">
-              <h1>02</h1>
-              <h6>Manage Ticket</h6>
-            </div>
-          </div>
-          <div class="organizers-card card-3">
-            <div class="badge-circle">
-              <i class="fa-solid fa-bullhorn fa-xl"></i>
-            </div>
-            <div class="organizers-card-content">
-              <h1>03</h1>
-              <h6>Event Promotion</h6>
-            </div>
-          </div>
-          <div class="organizers-card card-4">
-            <div class="badge-circle">
-              <i class="fa-solid fa-headset fa-xl"></i>
-            </div>
-            <div class="organizers-card-content">
-              <h1>04</h1>
-              <h6>24 X Customer Support</h6>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- <div class="organizers-side-right">
-        <img src="./img/side.svg">
-      </div> -->
-    </div>
-
-  </section>
-  <!-- Organizers Section End -->
-
-  <!-- Stadium Owner Start -->
-  <section class="owner">
-    <div class="owner-heading">
-      <img src="./img/icons/icon-7.svg">
-      <div>
-        <h1>For Stadium Owners</h1>
-        <p>About Venues</p>
-      </div>
-    </div>
-    <div class="owner-container">
-      <div class="owner-steps">
-        <div class="owner-steps-col col-one">
-          <div class="owner-card">
-            <h1>01</h1>
-            <p>Customize Slots</p>
-          </div>
-          <hr class="big-line">
-          <div class="owner-card">
-            <h1>02</h1>
-            <p>Manage Booking</p>
-          </div>
-          <hr class="small-line">
-        </div>
-        <div class="owner-steps-col col-two">
-          <hr class="small-line">
-          <div class="owner-card">
-            <h1>03</h1>
-            <p>Individual Application</p>
-          </div>
-          <hr class="big-line">
-          <div class="owner-card">
-            <h1>04</h1>
-            <p>24 X 7 Customer Support</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Stadium Owner End -->
-
-  <!-- Available Section Start -->
-  <section class="device">
-    <div class="device-heading">
-      <h1>Available on All your devices</h1>
-    </div>
-    <div class="device-row">
-      <div class="device-col">
-        <img src="./img/android.svg" alt="android">
-        <p>Android</p>
-      </div>
-      <div class="device-col">
-        <img src="./img/apple.svg" alt="ios">
-        <p>IOS</p>
-      </div>
-      <div class="device-col">
-        <img src="./img/web.svg" alt="web">
-        <p>Web</p>
-      </div>
-    </div>
-  </section>
-  <!-- Available Section End -->
-  
-  <div class="reach-circle"></div>
-  <!-- Reach us Section start -->
-  <section class="reach-us">
-    <div class="reach-container">
-      <div class="reach-heading">
-        <img src="./img/icons/icon-8.svg" alt="reach">
-        <h1>Reach Us</h1>
-        <h4>Via Mobile, Email</h4>
-        <p>Feel free to contact us, we are happy to help you for sure.</p>
-      </div>
-      <div class="reach-phone">
-        <i class="fa-solid fa-phone"></i> 
-        <p>+91 9698739898</p>
-      </div>
-      <div class="reach-phone">
-        <i class="fa-regular fa-envelope"></i>
-        <p>admin@sportswander.com</p>
-      </div>
-    </div>
-  </section>
-  <!-- Reach us Section End -->
-
-  <!-- Footer Start -->
-  <section class="footer">
-    <div class="footer-overlay">
-      <div class="footer-container">
-        <div class="footer-social">
-          <div class="footer-logo">
-            <img src="./img/Logo.png" alt="logo">
-            <p>Copyright © 2023</p>
-          </div>
-          <div class="social-links">
-            <div class="social-col">
-              <p>Install now</p>
-              <a href="#"><i class="fa-brands fa-google-play"></i></a>
-              <a href="#"><i class="fa-brands fa-apple"></i></a>
-            </div>
-            <div class="social-col">
-              <p>Follow us on</p>
-              <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-              <a href="#"><i class="fa-brands fa-instagram"></i></a>
-              <a href="#"><i class="fa-brands fa-twitter"></i></a>
-              <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-            </div>
-          </div>
-        </div>
-        <hr>
-        <div class="footer-group">
-          <div class="footer-col">
-            <div>
-              <h2>Our Products</h2>
-              <ul>
-                <li>NutCommerZ</li>
-                <li>Meshit</li>
-                <li>c-lk.in</li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-col">
-            <div>
-              <h2>Company</h2>
-              <ul>
-                <li>About</li>
-                <li>FAQs</li>
-                <li>Contact Support</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-group">
-          <div class="footer-col">
-            <div>
-              <h2>Learn more</h2>
-              <ul>
-                <li>Pricing</li>
-                <li>Terms and Conditions</li>
-                <li>Developer API</li>
-              </ul>
-            </div>
-          </div>
-          <div class="footer-col">
-            <div>
-              <h2>Policies</h2>
-              <ul>
-                <li>Delivery Policy</li>
-                <li>Cancellation Policy</li>
-                <li>Privacy Policy</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-  <!-- Footer End -->
-
-
-  <script src="script.js"></script>
 </body>
 </html>
